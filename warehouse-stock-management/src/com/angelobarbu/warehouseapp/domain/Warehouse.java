@@ -16,7 +16,7 @@ public class Warehouse {
     public Warehouse() {
         this.listeners.add(supplier -> {
             System.out.println("Notification email for supplier " + supplier.getName() + " to be sent");
-            Warehouse.this.emailedSuppliers++;
+            ++Warehouse.this.emailedSuppliers;
         });
     }
 
@@ -29,6 +29,7 @@ public class Warehouse {
             throw new SupplierExistsException("Supplier already exists in the warehouse's suppliers' list.");
         } else {
             this.suppliers.add(supplier);
+            this.notify(supplier);
         }
     }
 

@@ -69,7 +69,7 @@ public abstract class AbstractProduct implements Product {
         if (amount < 0.0) {
             throw new IllegalArgumentException("Cannot add a negative amount");
         } else {
-            this.quantity += quantity;
+            this.quantity += amount;
         }
     }
 

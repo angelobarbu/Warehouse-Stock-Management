@@ -9,7 +9,7 @@ public class Supplier {
     private int id;
     private String name;
     private String location;
-    private Set<Product> products = new HashSet<>();
+    private final Set<Product> products = new HashSet<>();
 
     public Supplier(int id, String name, String location) {
         this.id = id;
